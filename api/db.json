@@ -1,0 +1,60 @@
+{
+  "componentes": [
+    {
+      "id": "1",
+      "title": "TECLADO GAMER FORTREK HOLT RAINBOW GRAFITE 70550",
+      "image": "https://media.pichau.com.br/media/catalog/product/cache/2f958555330323e505eba7ce930bdf27/7/0/705502.jpg",
+      "price": 79.99,
+      "url": "https://www.pichau.com.br/teclado-gamer-fortrek-holt-rainbow-grafite-70550",
+      "cadastrar": "http://localhost:5173/cadastrar"
+    },
+    {
+      "id": "2",
+      "title": "CADEIRA GAMER COUGAR  PRETO ",
+      "image": "https://media.pichau.com.br/media/catalog/product/cache/2f958555330323e505eba7ce930bdf27/3/m/3meliglb00011.jpg",
+      "price": 1149.99,
+      "url": "https://www.pichau.com.br/cadeira-gamer-cougar-armor-elite-royal-preto-3meliglb-0001",
+      "cadastrar": "http://localhost:5173/cadastrar"
+    },
+    {
+      "id": "3",
+      "title": "GABINETE COOLER MASTER MASTERBOX LATERAL VIDRO TEMP PRETO",
+      "image": "https://media.pichau.com.br/media/catalog/product/cache/2f958555330323e505eba7ce930bdf27/m/c/mcb-d500d-kgnn-s011.jpg",
+      "price": 599.99,
+      "url": "https://www.pichau.com.br/gabinete-cooler-master-masterbox-td500-mesh-argb-lateral-vidro-temp-preto-mcb-d500d-kgnn-s01",
+      "cadastrar": "http://localhost:5173/cadastrar"
+    },
+    {
+      "id": "4",
+      "title": "MEMORIA PICHAU VELVET PRO, 16GB ",
+      "image": "https://media.pichau.com.br/media/catalog/product/cache/2f958555330323e505eba7ce930bdf27/p/c/pch-vvtpro-16gb.jpg",
+      "price": 509.99,
+      "url": "https://www.pichau.com.br/memoria-pichau-velvet-pro-16gb-1x16gb-ddr5-6000mhz-c36-pch-vvtpro-16gb",
+      "cadastrar": "http://localhost:5173/cadastrar"
+    },
+    {
+      "id": "5",
+      "title": "FONE DE OUVIDO JBL TUNE 720BT, WIRELESS, PRETO",
+      "image": "https://media.pichau.com.br/media/catalog/product/cache/2f958555330323e505eba7ce930bdf27/j/b/jblt720btblk.jpg",
+      "price": 359.99,
+      "url": "https://www.pichau.com.br/fone-de-ouvido-jbl-tune-720bt-wireless-preto-jblt720btblk",
+      "cadastrar": "http://localhost:5173/cadastrar"
+    },
+    {
+      "id": "6",
+      "title": "KIT COPO PRETO PICHAU E PORTA COPO PICHAU",
+      "image": "https://media.pichau.com.br/media/catalog/product/cache/2f958555330323e505eba7ce930bdf27/k/i/kitprtv2.png",
+      "price": 46.99,
+      "url": "https://www.pichau.com.br/kit-copo-preto-pichau-e-porta-copo-pichau",
+      "cadastrar": "http://localhost:5173/cadastrar"
+    },
+    {
+      "titulo": "",
+      "image": "https://media.pichau.com.br/media/catalog/product/cache/2f958555330323e505eba7ce930bdf27/z/n/zno-ara-bk021.jpg",
+      "price": "699.90",
+      "url": "https://www.pichau.com.br/mesa-para-escritorio-zinnia-aurea-a160-vidro-temperado-160cm-preto-zno-ara-bk02",
+      "title": "MESA PARA ESCRITÓRIO ZINNIA AUREA",
+      "id": "jeMK0ol"
+    }
+  ]
+}
