@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 const ItemContainer = styled.div`
 display: flex;
@@ -52,7 +53,7 @@ text-decoration: none;
 const Button = styled.div`
   display: flex;
   flex-direction: center;
-  justify-content: center  
+  justify-content: center ;
   width:30px;
   align-items:column;
   margin-bottom: -100;
@@ -68,21 +69,61 @@ const Button = styled.div`
   border-radius: 4px;
   
   `;
-export default function Hardwares({hardwares}) {
+const ButtonEdit = styled.span`
+  display: block;
+  font-weight: 400;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid transparent;
+  font-size: 14px;
+  padding: 8px 15px;
+  color: #fff;
+  background-color: #e2700c;
+  border-color: #9f5307;
+  border-radius: 4px;
+`;
+const ButtonDelete = styled.span`
+  display: block;
+  font-weight: 400;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid transparent;
+  font-size: 14px;
+  padding: 8px 15px;
+  color: #fff;
+  background-color: #e41010;
+  border-color: #8b0505;
+  border-radius: 4px;
+`;
+export default function Hardwares({ hardwares }) {
 
   return (
     <>
-      <ItemLink hrer={hardwares.url} target="_blank">
-        <ItemContainer>
-          <a href={ hardwares.image} target="_blank" ><Thumbnail src={hardwares.image} /></a>
-          <Title>{hardwares.title}</Title>
-          <Price>{hardwares.price}</Price>
-          <a href={hardwares.cadastrar} target="_blank"><Button>cadastrar</Button></a>
-          <a href={hardwares.excluir} target="_blank"><Button>Excluir</Button></a>
-          <a href={hardwares.excluir} target="_blank"><Button>Editar</Button></a>
-        </ItemContainer>
-      </ItemLink>
+      {!loading
+        ? (
+          <div>Deletado...</div>
+        )
+        :
+        (
+          <ItemLink hrer={hardwares.url} target="_blank">
+            <ItemContainer>
+              <p>{hardwares.id}</p>
+              <a href={hardwares.image} target="_blank" ><Thumbnail src={hardwares.image} /></a>
+              <Title>{hardwares.title}</Title>
+              <Price>{hardwares.price}</Price>
+              <a href={hardwares.cadastrar} target="_blank"><Button>cadastrar</Button></a>
+              <a href={hardwares.excluir} onClick={() => onDelete(hardware.id)} target="_blank"><Button>Excluir</Button></a>
+              <ButtonEdit>
+                <Link to={`/Editar/${hardwares.id}`}>
+                  Editar
+                </Link>
+              </ButtonEdit>
+                <ButtonDelete onClick={() => OnDelete(hardware.id)} target="_blank>" /> Deletar </ButtonDelete>
 
+            </ItemContainer>
+          </ItemLink>
+        )
+      }
     </>
   )
 }

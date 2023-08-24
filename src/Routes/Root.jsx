@@ -3,8 +3,9 @@ import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import ListaHardware from "./../Pages/ListaHardware"
 import Cadastrar from "./../Pages/Cadastrar";
 import NotFound from "./../Pages/NotFound";
-import Editar from "../Pages/Editar";
-import Dados from "../Pages/Dados/altDados";
+import Administrar from "../Pages/Administrar";
+import Editar from "../Pages/Edtitar";
+
 
 
 const Root = () => {
@@ -13,8 +14,9 @@ const Root = () => {
         <Router>
 
             <Routes>
-            <Route path="/Editar" element={<Editar />} />
-            <Route path="/AltDados" element={<AltDados/>} />
+            <Route path="/Administrar" element={<Administrar />} />
+            
+                <Route path="/Editar/:id" element={<Editar />} />
                 <Route path="/" element={<ListaHardware />} />
                 <Route path="/cadastrar" element={<Cadastrar />} />
                 <Route path="*" element={<NotFound />} />

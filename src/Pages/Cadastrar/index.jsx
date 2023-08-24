@@ -3,19 +3,22 @@ import api from './../../Services/api'
 import { useNavigate } from 'react-router-dom';
 import styled from "styled-components";
 
+const Container = styled.div`
 
-const Cad = styled.div`
 
-width: 100vh;
-padding:10px
-flex-direction: column;
-align-items: center;
-justify-items: center;
-border: 1px solid #fff;
-text-align: center;
-background-color: #4444
+
 
 `
+const Cad = styled.div`
+width: 100vh ;
+background-image: url('https://i.pinimg.com/originals/de/34/12/de3412e3c5d2ed0b11ec8291a28a3db5.gif');
+padding:10px;
+border: 8px inset #4444;
+text-align: center;
+color: #fff;
+background-color: #4444;
+
+`;
 
 const initialValues = {
     titulo: '',
@@ -58,35 +61,36 @@ function Cadastrar() {
 
     }
     return (
-        <>
+        <Container>
             <Cad>
 
                 <h1>Cadastrar</h1>
                 <form onSubmit={onSubmit} >
                     <div >
-                        <label htmlFor="">Titulo</label>
+                        <label htmlFor="">Titulo</label><br />
                         <input type="text" id="title" name="title" onChange={onChange} />
                     </div>
                     <div >
-                        <label htmlFor="">Url</label>
+                        <label htmlFor="">Url</label><br />
                         <input type="text" id="url" name="url" onChange={onChange} />
                     </div>
                     <div >
-                        <label htmlFor="">Imagem</label>
+                        <label htmlFor="">Imagem</label><br />
                         <input type="text" id="image" name="image" onChange={onChange} />
                     </div>
                     <div >
-                        <label htmlFor="">Preço</label>
+                        <label htmlFor="">Preço</label><br />
                         <input type="text" id="price" name="price" onChange={onChange} />
-                    </div>
+                    </div><br />
                     <button type="submit"> Salvar </button>
                     
                 </form>
 
             </Cad>
+        </Container>    
 
 
-        </>
+        
     )
 }
 
