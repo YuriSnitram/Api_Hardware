@@ -1,5 +1,5 @@
 import React from "react";
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import ListaHardware from "./../Pages/ListaHardware"
 import Cadastrar from "./../Pages/Cadastrar";
 import NotFound from "./../Pages/NotFound";
@@ -14,8 +14,8 @@ const Root = () => {
         <Router>
 
             <Routes>
-            <Route path="/Administrar" element={<Administrar />} />
-            
+                <Route path="/Administrar" element={<Administrar />} />
+
                 <Route path="/Editar/:id" element={<Editar />} />
                 <Route path="/" element={<ListaHardware />} />
                 <Route path="/cadastrar" element={<Cadastrar />} />

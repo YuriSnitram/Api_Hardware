@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
+import api from './../../Services/api'
 
 const ItemContainer = styled.div`
 display: flex;
@@ -14,11 +15,7 @@ width: 1000px;
 color:#29303b;
 margin-bottom: 30px;
 padding: 30px;
-
-
-
-
-`
+`;
 
 const Title = styled.div`
   display:flex;
@@ -28,15 +25,14 @@ const Title = styled.div`
   text-align: center;
   align-items: start;
   
-  
-  `
+  `;
 
 const Price = styled.div`
   margin-bottom: 5px;
   display:flex;
   align-items: end;
   justify-content:start;;   
-  `
+  `;
 
 const Thumbnail = styled.img`
 width: auto;
@@ -44,12 +40,13 @@ height: 100%;
 vertical-align: middle;
 float: left;
 margin-right: 10px;
-`
+`;
 
 
-const ItemLink = styled.a`
-text-decoration: none;
-`
+// const ItemLink = styled.a`
+// text-decoration: none;
+// `;
+
 const Button = styled.div`
   display: flex;
   flex-direction: center;
@@ -69,6 +66,7 @@ const Button = styled.div`
   border-radius: 4px;
   
   `;
+
 const ButtonEdit = styled.span`
   display: block;
   font-weight: 400;
@@ -78,8 +76,8 @@ const ButtonEdit = styled.span`
   font-size: 14px;
   padding: 8px 15px;
   color: #fff;
-  background-color: #e2700c;
-  border-color: #9f5307;
+  background-color: black;
+  border-color: silver;
   border-radius: 4px;
 `;
 const ButtonDelete = styled.span`
@@ -91,11 +89,34 @@ const ButtonDelete = styled.span`
   font-size: 14px;
   padding: 8px 15px;
   color: #fff;
-  background-color: #e41010;
-  border-color: #8b0505;
+  background-color: silver;
+  border-color: black;
   border-radius: 4px;
 `;
+const ButtonPane = styled.div`
+  display: flex;
+  align-items: center;
+  gap:5px;
+`
+const Panel = styled.div`
+  display: flex;
+  align-items: center;
+  gap:5px;
+  
+`
+
 export default function Hardwares({ hardwares }) {
+  const [loading, setLoading] = useState(ture);
+
+  function onDelete(id) {
+    setLoading(false);
+
+    const url = `/componentes'${id}`;
+    api.delete(url)
+      .then((response) => {
+        setLoading(response.data);
+      });
+  }
 
   return (
     <>
@@ -105,25 +126,28 @@ export default function Hardwares({ hardwares }) {
         )
         :
         (
-          <ItemLink hrer={hardwares.url} target="_blank">
-            <ItemContainer>
+
+          <ItemContainer>
+            <Panel>
               <p>{hardwares.id}</p>
               <a href={hardwares.image} target="_blank" ><Thumbnail src={hardwares.image} /></a>
               <Title>{hardwares.title}</Title>
               <Price>{hardwares.price}</Price>
-              <a href={hardwares.cadastrar} target="_blank"><Button>cadastrar</Button></a>
-              <a href={hardwares.excluir} onClick={() => onDelete(hardware.id)} target="_blank"><Button>Excluir</Button></a>
+            </Panel>
+            <a href={hardwares.cadastrar} target="_blank"><Button>cadastrar</Button></a>
+            <ButtonPane>
               <ButtonEdit>
                 <Link to={`/Editar/${hardwares.id}`}>
                   Editar
                 </Link>
               </ButtonEdit>
-                <ButtonDelete onClick={() => OnDelete(hardware.id)} target="_blank>" /> Deletar </ButtonDelete>
-
-            </ItemContainer>
-          </ItemLink>
+              <ButtonDelete onClick={() => OnDelete(hardwares.id)} target="_blank>" > Deletar </ButtonDelete>
+          </ButtonPane>
+          </ItemContainer >
+         
         )
-      }
+}
     </>
   )
 }
+
