@@ -10,11 +10,11 @@ const Container = styled.div`
 display: flex;
 text-align: center;
 flex-direction: column;
-background-color: black;
+background-image: url(https://wallpaperaccess.com/full/6604090.gif);
+background-size: cover;
 color: #fff; 
-width: 100vw;
+width: 100vw  ;
 height: 100vh;
-margin: 30px auto;
 
 `
 
@@ -28,7 +28,6 @@ align-items:center;
 justify-content:start;
 margin-top: 10px auto;
 padding: 10px 10px 30px 10px;
-background-color: black; ;
 flex-direction: column;
 `
 

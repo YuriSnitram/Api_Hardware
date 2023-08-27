@@ -1,11 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import Hardwares from '../../Components/Hardwares/editar'
 import api from '../../Services/api';
-
-
-
-
+import Hardwareadm from '../../Components/Hardwareadm';
 
 
 const Container = styled.div`
@@ -19,7 +15,7 @@ height: 100vh;
 margin: 30px auto;
 align-items: center;
 
-`
+`;
 
 
 
@@ -43,18 +39,20 @@ function Editar() {
 
     useEffect(() => {
         const url = '/componentes';
+
         const params = {};
         if (search) {
             params.title_like = search
             api.get('/componentes?_embed=componentes', { params })
-                .then((response) => setItems(response.data))
+                .then((response) => {
+                    setItems(response.data)
 
-        }
+                })
 
-        else {
+        } else {
             api.get(url)
                 .then((response) => {
-                    console.log(response)
+                    // console.log(response)
                     setItems(response.data);
                 })
         }
@@ -66,6 +64,7 @@ function Editar() {
     return (
 
         <Container>
+           
             <h1>Turbine seu Setup</h1>
             <input type="search" placeholder='Pesquisar' value={search} onChange={(ev) => setSearch(ev.target.value)}
             />
@@ -73,10 +72,11 @@ function Editar() {
             <br />
             <ListContainer>
                 {
-                    items.map(item => (
-                        <Hardwares key={item.id} hardwares={item} />
+                    items.map(item => {
 
-                    ))
+                        return (<Hardwareadm key={item.id} hardwares={item} />)
+
+                    })
 
                 }
 
@@ -87,4 +87,4 @@ function Editar() {
         </Container>
     )
 }
-export default Editar
+export default Editar;

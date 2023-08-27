@@ -8,14 +8,13 @@ import Editar from "../Pages/Edtitar";
 
 
 
-const Root = () => {
+function Root() {
 
     return (
         <Router>
 
             <Routes>
                 <Route path="/Administrar" element={<Administrar />} />
-
                 <Route path="/Editar/:id" element={<Editar />} />
                 <Route path="/" element={<ListaHardware />} />
                 <Route path="/cadastrar" element={<Cadastrar />} />

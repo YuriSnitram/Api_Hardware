@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import api from './../../Services/api'
+import api from '../../Services/api'
 
 const ItemContainer = styled.div`
 display: flex;
@@ -47,28 +47,12 @@ margin-right: 10px;
 // text-decoration: none;
 // `;
 
-const Button = styled.div`
+const Button = styled.span`
   display: flex;
   flex-direction: center;
   justify-content: center ;
-  width:30px;
   align-items:column;
-  margin-bottom: -100;
-  font-weight: 400;
-  text-align: center;
-  cursor: pointer;
-  border: 1px solid transparent;
-  font-size: 14px;
-  padding: 8px 15px;
-  color: #fff;
-  background-color: silver;
-  border-color: #6d6dec;
-  border-radius: 4px;
-  
-  `;
-
-const ButtonEdit = styled.span`
-  display: block;
+  margin-bottom: -60;
   font-weight: 400;
   text-align: center;
   cursor: pointer;
@@ -77,76 +61,122 @@ const ButtonEdit = styled.span`
   padding: 8px 15px;
   color: #fff;
   background-color: black;
-  border-color: silver;
+  border-color: #6d6dec;
   border-radius: 4px;
+  
+  `;
+
+
+
+const ButtonEdit = styled.span`
+display: inline-block;
+font-weight: 400;
+background-color:green;
+text-align: center;
+white-space: nowrap;
+vertical-align: middle;
+cursor: pointer;
+border: 2px solid black;
+font-size: 14px;
+padding: 9px 15px;
+color: #000;
+border-radius: 4px;
+
 `;
 const ButtonDelete = styled.span`
-  display: block;
-  font-weight: 400;
-  text-align: center;
-  cursor: pointer;
-  border: 1px solid transparent;
-  font-size: 14px;
-  padding: 8px 15px;
-  color: #fff;
-  background-color: silver;
-  border-color: black;
-  border-radius: 4px;
+display: inline-block;
+font-weight: 400;
+background-color: red;
+text-align: center;
+white-space: nowrap;
+vertical-align: middle;
+cursor: pointer;
+border: 2px solid black;
+font-size: 14px;
+padding: 10px 15px;
+color: #000;
+border-radius: 4px;
+
 `;
+
 const ButtonPane = styled.div`
-  display: flex;
-  align-items: center;
-  gap:5px;
-`
+display: flex;
+width:150px;
+height:40px;
+flex-direction: center;
+justify-content:space-between;
+align-items:center; 
+
+
+margin-bottom: -60;
+font-weight: 400;
+text-align: center;
+cursor: pointer;
+color: #fff;
+background-color: black;
+border-radius: 8px;
+text-decoration: none;
+
+
+
+`;
+
 const Panel = styled.div`
   display: flex;
   align-items: center;
   gap:5px;
   
+`;
+const Cadastrar = styled.div`
+
 `
 
+
 export default function Hardwares({ hardwares }) {
-  const [loading, setLoading] = useState(ture);
+  const [loading, setLoading] = useState(true);
 
   function onDelete(id) {
     setLoading(false);
 
-    const url = `/componentes'${id}`;
+    const url = `/componentes/${id}`;
     api.delete(url)
-      .then((response) => {
-        setLoading(response.data);
-      });
+      .then((response) => {});
   }
 
   return (
     <>
+    <a href={hardwares.cadastrar} target="_blank"><Button>Cadastrar</Button></a>
+    
+    
       {!loading
         ? (
           <div>Deletado...</div>
-        )
-        :
-        (
-
-          <ItemContainer>
+          )
+          :
+          (
+            
+            <ItemContainer>
+            
             <Panel>
               <p>{hardwares.id}</p>
-              <a href={hardwares.image} target="_blank" ><Thumbnail src={hardwares.image} /></a>
+              <Thumbnail src={hardwares.image} />
               <Title>{hardwares.title}</Title>
               <Price>{hardwares.price}</Price>
             </Panel>
-            <a href={hardwares.cadastrar} target="_blank"><Button>cadastrar</Button></a>
+            
             <ButtonPane>
               <ButtonEdit>
                 <Link to={`/Editar/${hardwares.id}`}>
                   Editar
                 </Link>
               </ButtonEdit>
-              <ButtonDelete onClick={() => OnDelete(hardwares.id)} target="_blank>" > Deletar </ButtonDelete>
-          </ButtonPane>
+              <ButtonDelete onClick={() => onDelete(hardwares.id)} > Deletar </ButtonDelete>
+            </ButtonPane>
           </ItemContainer >
-         
+          
+
         )
-}
+      }
     </>
   )
 }

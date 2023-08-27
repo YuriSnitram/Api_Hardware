@@ -3,6 +3,13 @@ import styled from "styled-components";
 import { useNavigate, useParams } from 'react-router-dom'
 import api from "../../Services/api";
 
+const initialValues = {
+    titulo: '',
+    image: '',
+    price: 0,
+    url: ''
+};
+
 const Container = styled.div`
 display: flex;
 justify-content: center;
@@ -18,20 +25,10 @@ color: #fff;
 background-color: #4444;
 `;
 
-const initialValues = {
-    titulo: '',
-    image: '',
-    price: 0,
-    url: ''
-};
-
-
-
-
 function Editar() {
 
     
-    const [values, setValues] = useState(initialValues)
+    const [values, setValues] = useState(initialValues);
     
     const navigate = useNavigate();
 
@@ -57,7 +54,7 @@ function Editar() {
 
         api.put(url, values)
             .then(() => {
-                navigate('/Administrar/')
+                navigate('/Administrar')
             })
 
 
