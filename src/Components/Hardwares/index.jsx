@@ -4,7 +4,8 @@ import styled from 'styled-components'
 const ItemContainer = styled.div`
 
 border-radius: 4px;
-background-color: white; 
+background-image: linear-gradient(90deg, #fff 0%, #b8b2b2 35%, #36110b 100%);
+opacity: 0.9;
 height:120px;
 width: 820px;
 color:#29303b;

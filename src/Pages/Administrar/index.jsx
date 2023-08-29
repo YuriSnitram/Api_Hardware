@@ -8,6 +8,7 @@ const Container = styled.div`
 display: flex;
 text-align: center;
 flex-direction: column;
+background-image: linear-gradient(90deg, #06080e 0%, #0c0c0c15 35%, #1780e2 100%);
 background-color: silver;
 color: #fff; 
 width: 100vw;
@@ -23,8 +24,9 @@ const ListContainer = styled.div`
 width: 100%;
 display: grid;
 align-items:center;
+background-image: url(https://j.gifs.com/X6GDpo@large.gif?download=true);
 margin-top: 10px auto;
-pedding: 10px 10px 30px 10px;
+padding: 10px 10px 30px 10px;
 background-color: silver;
 justify-content: center;
 `;

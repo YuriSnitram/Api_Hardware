@@ -158,7 +158,7 @@ export default function Hardwares({ hardwares }) {
             <ItemContainer>
             
             <Panel>
-              <p>{hardwares.id}</p>
+              
               <Thumbnail src={hardwares.image} />
               <Title>{hardwares.title}</Title>
               <Price>{hardwares.price}</Price>
