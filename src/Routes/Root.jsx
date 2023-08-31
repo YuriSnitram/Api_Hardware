@@ -14,7 +14,7 @@ function Root() {
         <Router>
 
             <Routes>
-                <Route path="/Administrar" element={<Administrar />} />
+                <Route path="/  " element={<Administrar />} />
                 <Route path="/Editar/:id" element={<Editar />} />
                 <Route path="/" element={<ListaHardware />} />
                 <Route path="/cadastrar" element={<Cadastrar />} />
