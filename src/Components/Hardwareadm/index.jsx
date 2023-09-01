@@ -145,7 +145,7 @@ export default function Hardwares({ hardwares }) {
 
   return (
     <>
-    <a href={hardwares.cadastrar} target="_blank"><Button>Cadastrar</Button></a>
+    <Link to ={hardwares.cadastrar} target="_blank"><Button>Cadastrar</Button></Link>
     
     
       {!loading
