@@ -146,11 +146,8 @@ export default function Hardwares({ hardwares }) {
     <>
     
     
-    <Buttoncad>
-              <Link to={ `${hardwares.cadastrar}`}>
-                Cadastrar
-                </Link>
-                </Buttoncad>
+    
+              
       {!loading
         ? (
           <div>Deletado...</div>
@@ -168,6 +165,11 @@ export default function Hardwares({ hardwares }) {
             </Panel>
             
             <ButtonPane>
+            <Buttoncad>
+            <Link to={ `/Cadastrar/${hardwares.id}`}>
+                Cadastrar
+                </Link>
+                </Buttoncad>
               
               <ButtonEdit>
                 <Link to={`/Editar/${hardwares.id}`}>

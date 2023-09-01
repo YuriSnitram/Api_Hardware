@@ -1,7 +1,7 @@
 {
   "componentes": [
     {
-      "id": "3",
+      "id": 3,
       "title": "GABINETE COOLER MASTER MASTERBOX LATERAL VIDRO TEMP PRETO",
       "image": "https://media.pichau.com.br/media/catalog/product/cache/2f958555330323e505eba7ce930bdf27/m/c/mcb-d500d-kgnn-s011.jpg",
       "price": 599.99,
@@ -9,7 +9,7 @@
       
     },
     {
-      "id": "4",
+      "id": 4,
       "title": "MEMORIA PICHAU VELVET PRO, 16GB ",
       "image": "https://media.pichau.com.br/media/catalog/product/cache/2f958555330323e505eba7ce930bdf27/p/c/pch-vvtpro-16gb.jpg",
       "price": "510.55",
@@ -22,7 +22,7 @@
       "price": "1.499,90",
       "url": "https://www.pichau.com.br/monitor-gamer-pichau-centauri-cr27w-27-pol-ips-qhd-1ms-165hz-freesync-hdmi-dp-pg-ctrw-wh01",
       "title": "MONITOR GAMER PICHAU CENTAURI CR27W, 27 POL",
-      "id": "MqawZKS"
+      "id": 2
     }
   ]
 }
