@@ -47,7 +47,7 @@ margin-right: 10px;
 // text-decoration: none;
 // `;
 
-const Button = styled.span`
+const Buttoncad = styled.span`
   display: flex;
   flex-direction: center;
   justify-content: center ;
@@ -141,11 +141,12 @@ export default function Hardwares({ hardwares }) {
     const url = `/componentes/${id}`;
     api.delete(url)
       .then((response) => {});
+
   }
 
   return (
     <>
-    <Link to ={hardwares.cadastrar} target="_blank"><Button>Cadastrar</Button></Link>
+    
     
     
       {!loading
@@ -165,6 +166,11 @@ export default function Hardwares({ hardwares }) {
             </Panel>
             
             <ButtonPane>
+              <Buttoncad>
+              <Link to={ `${hardwares.cadastrar}`}>
+                Cadastrar
+                </Link>
+                </Buttoncad>
               <ButtonEdit>
                 <Link to={`/Editar/${hardwares.id}`}>
                   Editar
