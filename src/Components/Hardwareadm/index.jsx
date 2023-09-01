@@ -127,9 +127,7 @@ const Panel = styled.div`
   gap:5px;
   
 `;
-const Cadastrar = styled.div`
 
-`
 
 
 export default function Hardwares({ hardwares }) {
@@ -148,7 +146,11 @@ export default function Hardwares({ hardwares }) {
     <>
     
     
-    
+    <Buttoncad>
+              <Link to={ `${hardwares.cadastrar}`}>
+                Cadastrar
+                </Link>
+                </Buttoncad>
       {!loading
         ? (
           <div>Deletado...</div>
@@ -160,17 +162,13 @@ export default function Hardwares({ hardwares }) {
             
             <Panel>
               
-              <Thumbnail src={hardwares.image} />
+              <Thumbnail src={hardwares.image} /> 
               <Title>{hardwares.title}</Title>
               <Price>{hardwares.price}</Price>
             </Panel>
             
             <ButtonPane>
-              <Buttoncad>
-              <Link to={ `${hardwares.cadastrar}`}>
-                Cadastrar
-                </Link>
-                </Buttoncad>
+              
               <ButtonEdit>
                 <Link to={`/Editar/${hardwares.id}`}>
                   Editar

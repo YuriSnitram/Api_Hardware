@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import api from '../../Services/api';
-import Hardwareadm from '../../Components/Hardwareadm';
+import Hardwareadm from '../../Components/Hardwareadm/index';
 
 
 const Container = styled.div`

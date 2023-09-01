@@ -6,7 +6,7 @@
       "image": "https://media.pichau.com.br/media/catalog/product/cache/2f958555330323e505eba7ce930bdf27/m/c/mcb-d500d-kgnn-s011.jpg",
       "price": 599.99,
       "url": "https://www.pichau.com.br/gabinete-cooler-master-masterbox-td500-mesh-argb-lateral-vidro-temp-preto-mcb-d500d-kgnn-s01",
-      "cadastrar": "http://localhost:5173/cadastrar"
+      
     },
     {
       "id": "4",
@@ -14,7 +14,7 @@
       "image": "https://media.pichau.com.br/media/catalog/product/cache/2f958555330323e505eba7ce930bdf27/p/c/pch-vvtpro-16gb.jpg",
       "price": "510.55",
       "url": "https://www.pichau.com.br/memoria-pichau-velvet-pro-16gb-1x16gb-ddr5-6000mhz-c36-pch-vvtpro-16gb",
-      "cadastrar": "http://localhost:5173/cadastrar"
+      
     },
     {
       "titulo": "",
